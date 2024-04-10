@@ -12,3 +12,7 @@ I needed to figure this out for work, and I'm going to make the experiemnts publ
   - Fedora 40+
 
 It was written on and tested on Fedora, but it should work on other operating systems or distros.
+
+## Overview
+
+The main objective is to figure out how to use the embed filesystem to store files. Files can be stored as strings or byte slices, but what I really need is a virtual filesystem to read files from.
