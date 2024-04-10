@@ -1,20 +1,17 @@
 package main
 
 import (
-	"embed"
 	"errors"
 	"fmt"
 	"log"
-)
 
-//go:embed hello/hello.txt
-//go:embed data
-var eFS embed.FS
+	"github.com/quinnrm/go-embed-exp/internal/embedData"
+)
 
 func main() {
 	fmt.Println("Go embed experiments.")
 
-	efsData, err := eFS.ReadDir(".")
+	efsData, err := embedData.EFS.ReadDir(".")
 	if !errors.Is(err, nil) {
 		log.Fatalf("ERROR: (main) Problem reading embeded filesystem root dir, %v", err)
 	}
@@ -27,11 +24,11 @@ func main() {
 	fmt.Println()
 	fmt.Println("Read \"hello.txt\" from the embeded FS.")
 
-	txtHello, err := eFS.ReadFile("hello/hello.txt")
+	txtHello, err := embedData.EFS.ReadFile("hello/hello.txt")
 	if !errors.Is(err, nil) {
 		log.Fatalf("ERROR: (main) Problem with \"hello.txt\", %v", err)
 	}
 
 	fmt.Println("Print \"hello.txt\"")
-	fmt.Println(string(txtHello))
+	fmt.Printf("%s", string(txtHello))
 }
