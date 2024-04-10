@@ -1,0 +1,1 @@
+"Hello! Welcome to Go's embeded filesystem."

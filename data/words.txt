@@ -1,0 +1,8 @@
+sky
+blue
+rock
+falcon
+war
+tree
+storm
+cup
