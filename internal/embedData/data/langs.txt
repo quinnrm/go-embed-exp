@@ -1,0 +1,16 @@
+Perl
+Raku
+F#
+Clojure
+Go
+C#
+Haskell
+Elixir
+Erlang
+Crystal
+C
+C++
+Carbon
+Ruby
+Python
+StandardML
